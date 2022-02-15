@@ -16,3 +16,12 @@
   border: 1.01px solid var(--border);
   border-radius: 1rem;
 }
+
+@mixin layoutGrid {
+  grid-column: 1/-1;
+  display: grid;
+  width: 69.375rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.875rem;
+}
