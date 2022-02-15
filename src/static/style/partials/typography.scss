@@ -1,0 +1,12 @@
+.logo{
+    color: var(--primaryColor);
+    font-size: 25px;
+    width: 5rem;
+    // height: 2.5rem;
+    
+    &__color{
+        color: var(--secondaryColor);
+        display: block;
+        line-height: .75rem;
+    }
+}

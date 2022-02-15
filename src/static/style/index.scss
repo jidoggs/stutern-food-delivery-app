@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Nunito", sans-serif;
+}
+@import "./partials/mixins.scss";
+@import "./partials/variables.scss";
+@import "./partials/layout.scss";
+@import "./partials/typography.scss";
+
+@import "./pages/cart.scss";
+@import "./pages/home.scss";
+@import "./pages/profile.scss";
+@import "./pages/resturant.scss";

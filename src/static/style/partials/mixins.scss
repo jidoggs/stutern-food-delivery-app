@@ -1,0 +1,13 @@
+@mixin clearDefaultInputStyle {
+    background-color: inherit;
+      border: none;
+      &:focus{
+        outline: none;
+      }
+}
+
+@mixin  flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

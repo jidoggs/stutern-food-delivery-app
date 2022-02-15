@@ -1,0 +1,110 @@
+.app {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  &__header {
+    border-bottom: 1px solid var(--border);
+  }
+
+  &__page,
+  &__header {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: inherit;
+  }
+}
+
+.header {
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.875rem;
+  padding: 1.25rem 0;
+
+  .logo {
+    grid-column: 1/2;
+  }
+
+  &__form {
+    grid-column: 2/5;
+    justify-self: flex-end;
+    align-self: center;
+    background-color: var(--border);
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.75rem;
+    input {
+      padding-right: 1.25rem;
+      @include clearDefaultInputStyle;
+    }
+    button {
+      @include clearDefaultInputStyle;
+    }
+  }
+  &__nav {
+    grid-column: 8/-1;
+    .nav {
+      display: grid;
+      grid-template-columns: max-content 1.75fr max-content 1.25fr max-content 1.25fr max-content 1.5fr max-content 1fr max-content;
+      align-items: center;
+
+      &__link1 {
+        grid-column: 1/2;
+      }
+      &__link2 {
+        grid-column: 3/4;
+      }
+      &__link3 {
+        grid-column: 5/6;
+        display: flex;
+        height: 50%;
+        hr {
+          border: 1px solid var(--border);
+        }
+      }
+      &__link4 {
+        grid-column: 7/8;
+        a {
+          display: flexs;
+        }
+      }
+      &__link5 {
+        grid-column: 9/10;
+        a {
+          display: flexs;
+        }
+      }
+      &__link6 {
+        grid-column: 11/12;
+        width: 3.4rem;
+        height: 3.4rem;
+        border-radius: 1.2rem;
+        border: 2px solid var(--secondaryColor);
+        display: grid;
+        place-content: center;
+      }
+    }
+  }
+}
+
+.profile__picture {
+  background-color: red;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+}
+.nav__cart {
+  position: relative;
+  &-count {
+    background-color: var(--secondaryColor);
+    color: var(--white);
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.5rem;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    font-size: 0.625rem;
+    @include flexCenter;
+  }
+}
