@@ -1,13 +1,18 @@
 @mixin clearDefaultInputStyle {
-    background-color: inherit;
-      border: none;
-      &:focus{
-        outline: none;
-      }
+  background-color: inherit;
+  border: none;
+  &:focus {
+    outline: none;
+  }
 }
 
-@mixin  flexCenter {
+@mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin borderAndRadius {
+  border: 1.01px solid var(--border);
+  border-radius: 1rem;
 }

@@ -1,0 +1,42 @@
+.count__btn {
+  @include flexCenter;
+  background-color: var(--cardBg);
+  color: var(--primaryColor);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  &:first-child {
+    margin-right: 0.375rem;
+  }
+  &:last-child {
+    margin-left: 0.375rem;
+  }
+}
+.btn {
+  @include clearDefaultInputStyle;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.cart__addBtn {
+  background-color: var(--white);
+  color: var(--secondaryColor);
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--secondaryColor);
+  }
+}
+.checkout__btn {
+  color: var(--white);
+  background-color: var(--secondaryColor);
+  border-radius: 0.5rem;
+  width: 100%;
+  box-shadow: 0px 8.095406532287598px 20.238515853881836px 0px #4e60ff29;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--secondaryColor);
+  }
+}

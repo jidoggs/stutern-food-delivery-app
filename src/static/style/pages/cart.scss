@@ -1,0 +1,97 @@
+.cart {
+  display: grid;
+  width: 69.375rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.875rem;
+
+  .title__primary {
+    grid-row: 1/2;
+  }
+
+  &__menu {
+    grid-column: 1/9;
+    grid-row: 2/3;
+    padding: 1rem;
+    @include borderAndRadius;
+  }
+  &__addBtn {
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
+  &__information {
+    grid-column: 9/-1;
+    grid-row: 2/5;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: max-content 1fr 27fr 6fr max-content 4.5fr max-content 1.67fr max-content;
+    padding: 1rem 0;
+    border-bottom: 1.01px solid var(--border);
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &-image {
+      grid-column: 1/2;
+      background-color: red;
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 0.75rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &-title {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      align-self: flex-start;
+    }
+    &-description {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      align-self: flex-end;
+    }
+    &-count {
+      grid-column: 5/6;
+      @include flexCenter;
+    }
+    &-value {
+      grid-column: 7/8;
+      align-self: center;
+    }
+    .icon__delete {
+      grid-column: 9/10;
+      align-self: center;
+    }
+  }
+
+  &__information {
+    display: grid;
+    grid-template-rows: max-content 1.875rem max-content;
+    &-delivery {
+      background-color: red;
+      padding: 1rem;
+      height: 433.104248046875px;
+      width: 354.1740417480469px;
+      border-radius: 16.190813064575195px;
+    }
+    &-checkout {
+      @include borderAndRadius;
+      padding: 1rem;
+      grid-row: 3/4;
+
+      .checkout {
+        &__title {
+          margin-bottom: 1.25rem;
+        }
+        &__text {
+          margin-bottom: 0.75rem;
+          &:last-child {
+            margin-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
