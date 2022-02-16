@@ -1,13 +1,17 @@
 import React from "react";
+import { useFetch } from "../customHooks/useFetch";
 import CategoryItem from "./CategoryItem";
 
 function Category() {
-  const items = ["Pizza", "Pizza", "Pizza", "Pizza", "Pizza", "Pizza"];
+  const { data } = useFetch("https://ig-food-menus.herokuapp.com/pagination");
+
+  const response = data && Object.keys(data);
+
   return (
     <section className="home__category home">
       <ul className="category">
-        {items.map((item, index) => (
-          <CategoryItem key={index} link={item} title={item} image={""} />
+        {response.map((item, index) => (
+          <CategoryItem key={index} link={item} title={item} />
         ))}
       </ul>
     </section>
