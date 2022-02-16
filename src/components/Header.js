@@ -20,7 +20,7 @@ function Header() {
         <nav className="header__nav">
           <ul className="nav">
             <li className="nav__link1">
-              <NavLink to={"/resturant"}>Restaurants</NavLink>
+              <NavLink to={"/resturants"}>Restaurants</NavLink>
             </li>
             <li className="nav__link2">
               <NavLink to={"/deals"}>Deals</NavLink>

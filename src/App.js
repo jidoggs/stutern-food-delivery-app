@@ -5,7 +5,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
-import Resturant from "./pages/Resturant";
+import Resturants from "./pages/Resturants";
 import ResturantByMeal from "./pages/ResturantByMeal";
 import Deals from "./pages/Deals";
 import Cart from "./pages/Cart";
@@ -17,9 +17,9 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/resturant" element={<Resturant />} />
+          <Route path="/resturants" element={<Resturants />} />
           <Route
-            path="/resturant/:resturantType"
+            path="/resturants/:resturantType"
             element={<ResturantByMeal />}
           />
           <Route path="/deals" element={<Deals />} />
