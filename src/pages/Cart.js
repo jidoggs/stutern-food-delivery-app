@@ -6,10 +6,10 @@ import DeliveryInfo from "../components/DeliveryInfo";
 function Cart() {
   return (
     <main className="app__page cart">
-      <h2 className="title__primary mtb">My cart</h2>
+      <h2 className="title__primary mb1">My cart</h2>
       <section className="cart__menu">
         <h3 className="title__secondary">
-          Menu <span className="cart__item-counter">4 meals</span>{" "}
+          Menu <span className="title__secondary--sub">4 meals</span>{" "}
         </h3>
         <ul className="cart__items">
           <CartItem

@@ -8,8 +8,11 @@
   color: inherit;
   font-family: "Nunito", sans-serif;
 }
-@import "./partials/mixins.scss";
 @import "./partials/variables.scss";
+h1,h2,h3,h4,h5,h6,p,span{
+  color: var(--primaryColor);
+}
+@import "./partials/mixins.scss";
 @import "./partials/layout.scss";
 @import "./partials/typography.scss";
 @import "./partials/button.scss";

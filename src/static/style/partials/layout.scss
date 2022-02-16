@@ -1,7 +1,6 @@
 .app {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
-  padding-bottom: 4rem;
   &__header {
     border-bottom: 1px solid var(--border);
   }
@@ -13,6 +12,8 @@
     grid-template-columns: inherit;
   }
   &__page {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
     @include layoutGrid;
   }
 }

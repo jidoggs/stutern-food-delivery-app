@@ -1,10 +1,19 @@
 import React from "react";
 import { Input } from "antd";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import CartIcon from "./customIcons/CartIcon";
 
 const { Search } = Input;
 function Header() {
+  const { pathname } = useLocation();
+
+  const isAddedinView = () => {
+    if (pathname === "/mycart") {
+      return true;
+    }
+    return undefined;
+  };
+
   return (
     <header className="app__header">
       <div className="header">
@@ -34,9 +43,13 @@ function Header() {
               </NavLink>
             </li>
             <li className="nav__link5 nav__cart">
-              <span className="nav__cart-count">25</span>
+              {!isAddedinView() && <span className="nav__cart-count">25</span>}
               <NavLink to={"/mycart"}>
-                <CartIcon bgYes className="nav__cart-icon" />
+                <CartIcon
+                  added={isAddedinView()}
+                  bgYes
+                  className="nav__cart-icon"
+                />
               </NavLink>
             </li>
             <li className="nav__link6">

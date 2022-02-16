@@ -11,6 +11,11 @@
   justify-content: center;
   align-items: center;
 }
+@mixin flexCenterBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 @mixin borderAndRadius {
   border: 1.01px solid var(--border);
