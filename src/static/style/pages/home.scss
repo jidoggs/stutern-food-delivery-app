@@ -65,7 +65,7 @@
         outline: 2px solid var(--secondaryColor);
         border: none;
         background-color: var(--cardBg);
-        .darkGray{
+        .darkGray {
           color: var(--secondaryColor);
         }
       }
@@ -113,11 +113,12 @@
       height: 10rem;
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
     }
     &-description {
       padding: 1rem;
       display: grid;
-      grid-template-columns: minmax(max-content, 11.25rem) 1fr max-content;
+      grid-template-columns: minmax(max-content, 10fr) 1fr max-content;
     }
     .description {
       &__title {
@@ -138,7 +139,7 @@
           background-color: var(--secondaryColor);
         }
         .distance,
-        .price{
+        .price {
           color: var(--naturalGray);
         }
       }
@@ -166,6 +167,6 @@
     display: block;
     width: 0.75rem;
     height: 0.75rem;
-    background-color: red;
+    margin-right: 0.5rem;
   }
 }

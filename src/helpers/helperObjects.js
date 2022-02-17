@@ -1,0 +1,17 @@
+export const categoryObject = {
+  bbq: "bbqs",
+  "best-food": "best-foods",
+  bread: "breads",
+  burger: "burgers",
+  chocolate: "chocolates",
+  dessert: "desserts",
+  drink: "drinks",
+  "fried-chicken": "chickens",
+  "ice-cream": "cream",
+  pizza: "pizzas",
+  pork: "porks",
+  sandwiche: "sandwichs",
+  sausage: "sausages",
+  steak: "steaks",
+  "our-food": "our-foods",
+};

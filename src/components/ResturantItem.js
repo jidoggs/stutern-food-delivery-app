@@ -9,7 +9,12 @@ function ResturantItem({
   resturantTitle,
   distance,
   price,
+  mealArray,
 }) {
+  const badgeData =
+    mealArray &&
+    mealArray.map((meal, index) => <MenuBadge title={meal} key={index} />);
+
   return (
     <li className="resturant__item">
       {feature && <span className="resturant__item-feature">FEATURED</span>}
@@ -28,9 +33,7 @@ function ResturantItem({
           <span className="price">{`$${price} min sum`}</span>
         </p>
         <CartIcon className="description__cart" />
-        <ul className="description__badge">
-          <MenuBadge title="Sushi" />
-        </ul>
+        <ul className="description__badge">{badgeData}</ul>
       </div>
     </li>
   );
