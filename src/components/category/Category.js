@@ -1,5 +1,5 @@
 import React from "react";
-import { useFetch } from "../customHooks/useFetch";
+import { useFetch } from "../../customHooks/useFetch";
 import CategoryItem from "./CategoryItem";
 
 function Category() {

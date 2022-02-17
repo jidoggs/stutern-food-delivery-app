@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { capitilizeFirstLetter } from "../helpers/helperFunctions";
+import { capitilizeFirstLetter } from "../../helpers/helperFunctions";
 
 function CategoryItem({ link, title }) {
   return (
