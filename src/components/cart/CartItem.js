@@ -1,5 +1,5 @@
 import React from "react";
-import DeleteIcon from "./customIcons/DeleteIcon";
+import DeleteIcon from "../customIcons/DeleteIcon";
 
 function CartItem({ itemImage, itemTitle, itemDescription, itemValue }) {
   return (

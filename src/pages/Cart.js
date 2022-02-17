@@ -1,6 +1,6 @@
 import React from "react";
+import CartItem from "../components/cart/CartItem";
 import CartCheckout from "../components/CartCheckout";
-import CartItem from "../components/CartItem";
 import DeliveryInfo from "../components/DeliveryInfo";
 
 function Cart() {
