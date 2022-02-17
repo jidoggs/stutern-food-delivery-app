@@ -1,7 +1,7 @@
 import React from "react";
+import CartCheckout from "../components/cart/CartCheckout";
 import CartItem from "../components/cart/CartItem";
-import CartCheckout from "../components/CartCheckout";
-import DeliveryInfo from "../components/DeliveryInfo";
+import DeliveryInfo from "../components/cart/DeliveryInfo";
 
 function Cart() {
   return (
