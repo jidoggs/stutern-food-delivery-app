@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ResturantItem from "../components/ResturantItem";
+import ResturantItem from "../components/resturantAndMenu/ResturantItem";
 import { useFetch } from "../customHooks/useFetch";
 import { checkForKeywords } from "../helpers/helperFunctions";
 

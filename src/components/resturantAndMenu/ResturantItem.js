@@ -1,6 +1,6 @@
 import { HistoryOutlined } from "@ant-design/icons/lib/icons";
 import React from "react";
-import CartIcon from "./customIcons/CartIcon";
+import CartIcon from "../customIcons/CartIcon";
 import MenuBadge from "./MenuBadge";
 
 function ResturantItem({

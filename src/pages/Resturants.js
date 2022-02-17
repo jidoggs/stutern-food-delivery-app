@@ -1,5 +1,5 @@
 import React from "react";
-import ResturantItem from "../components/ResturantItem";
+import ResturantItem from "../components/resturantAndMenu/ResturantItem";
 import { useFetch } from "../customHooks/useFetch";
 import { checkForKeywords } from "../helpers/helperFunctions";
 
