@@ -1,11 +1,14 @@
 import React from "react";
 import { Input } from "antd";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import CartIcon from "./customIcons/CartIcon";
+import CartIcon from "../customIcons/CartIcon";
+import { useSelector } from "react-redux";
+import avatar from '../../static/images/avatar.png'
 
 const { Search } = Input;
 function Header() {
   const { pathname } = useLocation();
+  const cartItems = useSelector((state) => state.cartR.cart);
 
   const isAddedinView = () => {
     if (pathname === "/mycart") {
@@ -43,7 +46,9 @@ function Header() {
               </NavLink>
             </li>
             <li className="nav__link5 nav__cart">
-              {!isAddedinView() && <span className="nav__cart-count">25</span>}
+              {!isAddedinView() && (
+                <span className="nav__cart-count">{cartItems.length}</span>
+              )}
               <NavLink to={"/mycart"}>
                 <CartIcon
                   added={isAddedinView()}
@@ -54,7 +59,7 @@ function Header() {
             </li>
             <li className="nav__link6">
               <NavLink to={"/profile"}>
-                <span className="profile__picture"></span>
+                <span className="profile__picture" style={{backgroundImage: `url(${avatar})`}}></span>
               </NavLink>
             </li>
           </ul>
