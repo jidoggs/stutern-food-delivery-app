@@ -24,20 +24,60 @@
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+
+  &__delete {
+    cursor: pointer;
+    &:hover {
+      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+      g{
+        stroke: red;
+      }
+    }
+  }
 }
 
-.item{
-  &__our-foods{
+.item {
+  &__our-foods {
     grid-column: 4/7;
     grid-row: 3/4;
   }
-  &__best-foods{
+  &__best-foods {
     grid-column: 2/4;
     grid-row: 3/4;
   }
 }
-.anticon{
+.anticon {
   width: fit-content;
   height: fit-content;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
+}
+
+.isloading {
+  height: 50vh;
+  grid-column: 1/-1;
+  display: grid;
+  place-content: center;
+}
+.isLoading {
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+  }
+  &__icon {
+    color: var(--secondaryColor);
+  }
+
+  &__icon {
+    width: 4rem;
+    animation: rotate360 5s infinite;
+  }
 }
