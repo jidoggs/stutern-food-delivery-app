@@ -1,25 +1,18 @@
 import React from "react";
 import HeroCard from "./HeroCard";
+import img1 from "../../static/images/img1.png";
+import img2 from "../../static/images/img2.png";
 
 function Hero() {
   return (
     <section className="home__hero hero home">
-      <HeroCard
-        type="All deserts"
-        discount="20"
-        name="Deserty"
-        // image={
-        //   "https://w7.pngwing.com/pngs/317/859/png-transparent-graphy-of-burger-with-tomato-and-vegetable-veggie-burger-hamburger-vegetarian-cuisine-chicken-sandwich-vada-pav-burger-food-cheese-recipe.png"
-        // }
-      />
+      <HeroCard type="All deserts" discount="20" name="Deserty" image={img1} />
       <HeroCard
         color
         type="Big Burgers"
         discount="50"
         name="Fooddies"
-        // image={
-        //   "https://toppng.com/uploads/preview/hamburger-11599648567df5j04phrd.png"
-        // }
+        image={img2}
       />
     </section>
   );
