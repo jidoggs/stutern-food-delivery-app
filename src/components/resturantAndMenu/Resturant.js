@@ -7,6 +7,7 @@ function Resturant() {
       <h5 className="title__primary mb1">Nearby restaurants</h5>
       <ul className="resturant">
         <ResturantItem
+        staticItem
           feature
           resturantTitle={"Royal Sushi House"}
           resturantImage={
@@ -17,7 +18,8 @@ function Resturant() {
           mealArray={["best-foods"]}
         />
         <ResturantItem
-          feature
+        staticItem
+        feature
           resturantTitle={"Burgers & Pizza"}
           resturantImage={
             "https://media.istockphoto.com/photos/hamburger-with-cheese-and-french-fries-picture-id1188412964?k=20&m=1188412964&s=612x612&w=0&h=Ow-uMeygg90_1sxoCz-vh60SQDssmjP06uGXcZ2MzPY="
@@ -28,7 +30,8 @@ function Resturant() {
 
         />
         <ResturantItem
-          resturantTitle={"Ninja sushi"}
+        staticItem
+        resturantTitle={"Ninja sushi"}
           resturantImage={"https://media.istockphoto.com/photos/sushi-set-on-bamboo-plate-picture-id1053855452?k=20&m=1053855452&s=612x612&w=0&h=yEl9DZtumD162c5yb_nhjogyZvhpEND8HZAzj4LE7RM="}
           distance={"20-40"}
           price={40}
@@ -36,7 +39,8 @@ function Resturant() {
 
         />
         <ResturantItem
-          resturantTitle={"Sushi master"}
+        staticItem
+        resturantTitle={"Sushi master"}
           resturantImage={"https://www.namesnack.com/images/namesnack-sushi-bar-business-names-5552x3701-20200915.jpeg?crop=4:3,smart&width=1200&dpr=2"}
           distance={"60-70"}
           price={49}
@@ -44,7 +48,8 @@ function Resturant() {
 
         />
         <ResturantItem
-          resturantTitle={"Japanese sushi"}
+        staticItem
+        resturantTitle={"Japanese sushi"}
           resturantImage={"https://i2.wp.com/blog.ofadaa.com/wp-content/uploads/2015/12/best-sushi-restaurants-lagos-1.jpg?zoom=2.625&fit=740%2C494&ssl=1"}
           distance={"30-50"}
           price={104}
@@ -52,7 +57,8 @@ function Resturant() {
 
         />
         <ResturantItem
-          resturantTitle={"Kobe"}
+        staticItem
+        resturantTitle={"Kobe"}
           resturantImage={"https://i2.wp.com/blog.ofadaa.com/wp-content/uploads/2015/12/best-sushi-restaurants-lagos-1.jpg?zoom=2.625&fit=740%2C494&ssl=1"}
           distance={"20-30"}
           price={67}

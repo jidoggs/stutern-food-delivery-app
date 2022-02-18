@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CartIcon({className,bgYes, added, onClick}) {
+function CartIcon({className,bgYes, added, onClick, itemRef}) {
   return (
     <svg
     width={ bgYes? 52 : 20 }
@@ -9,6 +9,7 @@ function CartIcon({className,bgYes, added, onClick}) {
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     onClick={onClick}
+    ref={itemRef}
   >
     
     { bgYes?
@@ -46,7 +47,7 @@ function CartIcon({className,bgYes, added, onClick}) {
         strokeLinejoin="round"
       />
       <path d="M13.3333 8.33333C13.3333 9.21738 12.9821 10.0652 12.357 10.6904C11.7319 11.3155 10.8841 11.6667 10 11.6667C9.11595 11.6667 8.2681 11.3155 7.64298 10.6904C7.01786 10.0652 6.66667 9.21738 6.66667 8.33333" 
-      stroke="#C7C8D2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      stroke={added?"#4E60FF":"#c7c8d2"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </>
     }
   </svg>

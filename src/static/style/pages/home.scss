@@ -118,7 +118,7 @@
     &-description {
       padding: 1rem;
       display: grid;
-      grid-template-columns: minmax(max-content, 10fr) 1fr max-content;
+      grid-template-columns: minmax(max-content, 14.375rem) 1fr max-content;
     }
     .description {
       &__title {
@@ -130,13 +130,17 @@
         margin-bottom: 0.875rem;
         grid-column: 1/2;
         grid-row: 2/3;
-        @include flexCenterBetween;
+        // @include flexCenterBetween;
+        display: flex;
+        align-items: center;
 
         .seprator {
+          display: block;
           width: 4px;
           height: 4px;
           border-radius: 2px;
           background-color: var(--secondaryColor);
+          margin: 0 .5rem;
         }
         .distance,
         .price {

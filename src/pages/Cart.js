@@ -1,34 +1,48 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import CartCheckout from "../components/cart/CartCheckout";
 import CartItem from "../components/cart/CartItem";
 import DeliveryInfo from "../components/cart/DeliveryInfo";
 
 function Cart() {
+  const cartItems = useSelector((state) => state.cartR.cart);
+  let navigate = useNavigate();
+
+  const addMoreMealsClickChandler = () => {
+    navigate("/deals");
+  };
+
   return (
     <main className="app__page cart">
       <h2 className="title__primary mb1">My cart</h2>
       <section className="cart__menu">
         <h3 className="title__secondary">
-          Menu <span className="title__secondary--sub">4 meals</span>{" "}
+          Menu{" "}
+          <span className="title__secondary--sub">{`${cartItems.length} meals`}</span>{" "}
         </h3>
         <ul className="cart__items">
-          <CartItem
-            itemImage="https://media-cdn.tripadvisor.com/media/photo-s/19/9e/c0/32/random-restaurant.jpg"
-            itemTitle={"Chicken & Ribs Combo"}
-            itemDescription="Lorem ipsum dolor sit amet, pri atqui facete evertitur an, ea assum
-        solet invidunt vim."
-            itemValue="$12.40"
-          />
-          <CartItem
-            itemImage="https://media-cdn.tripadvisor.com/media/photo-s/19/9e/c0/32/random-restaurant.jpg"
-            itemTitle={"Chicken & Ribs Combo"}
-            itemDescription="Lorem ipsum dolor sit amet, pri atqui facete evertitur an, ea assum
-        solet invidunt vim."
-            itemValue="$12.40"
-          />
+          {cartItems.map((cartItm, idx) => {
+            const { dsc, img, name, price, id, count } = cartItm;
+
+            return (
+              <CartItem
+                key={idx}
+                itemDescription={dsc}
+                itemImage={img}
+                itemTitle={name}
+                itemValue={price}
+                itemId={id}
+                itemCount={count}
+              />
+            );
+          })}
         </ul>
       </section>
-      <button className="title__tertiary cart__addBtn btn mt">
+      <button
+        className="title__tertiary cart__addBtn btn mt-75"
+        onClick={addMoreMealsClickChandler}
+      >
         {" "}
         ← Add more meals
       </button>
